@@ -1,13 +1,12 @@
-import React from "react"
+import React from "react";
 
-type Props = TodoProps & {// the & symbol means Props is extending the TodoProps interface
-  /* updateTodo & deleteTodo are added when the TodoProps is extended */
-  updateTodo: (todo: ITodo) => void
-  deleteTodo: (_id: string) => void
-}
+type Props = TodoProps & {
+  updateTodo: (todo: ITodo) => void;
+  deleteTodo: (_id: string) => void;
+};
 
-const Todo: React.FC<Props> = ({todo, updateTodo, deleteTodo}) => {
-  const checkTodo: string = todo.status ? `line-through` : ""
+const Todo: React.FC<Props> = ({ todo, updateTodo, deleteTodo }) => {
+  const checkTodo: string = todo.status ? `line-through` : "";
   return (
     <div className="Card">
       <div className="Card--text">
@@ -29,7 +28,7 @@ const Todo: React.FC<Props> = ({todo, updateTodo, deleteTodo}) => {
         </button>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Todo
+export default Todo;
