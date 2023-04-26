@@ -13,7 +13,7 @@
 </ul><ul>
 <li>TypeScript</li>
 <h2>Screenshots</h2>
-<img src="https://prnt.sc/AIb2eW4Om_pU" alt="Screenshot" width="800" />
+<img src="/src/assets//images/screenshot1.jpg" alt="Screenshot" width="800" />
 </ul><h2>Setup</h2>
 <hr><p>To set up the project you can clone backend from this repo: https://github.com/BogdanGlazkov/adev-todo-backend. Then create .env file (copy from .env.example) and add your MONGO_DB url (which includes your Mongo login and password)</p><h5>Steps</h5><ul>
 <li>npm i</li>
