@@ -25,6 +25,5 @@ export const loginUserService = async (body: IUser) => {
 };
 
 export const logoutUserService = async () => {
-  token.unset();
-  return api.get("/login");
+  return token.unset();
 };

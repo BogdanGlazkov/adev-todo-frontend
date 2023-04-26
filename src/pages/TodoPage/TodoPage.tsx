@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import TodoItem from "../../components/TodoItem";
 import AddTodo from "../../components/AddTodo";
 import {
@@ -7,9 +8,11 @@ import {
   updateTodo,
   deleteTodo,
 } from "../../services/todosApi";
+import { logoutUserService } from "../../services/usersApi";
 
 function TodoPage() {
   const [todos, setTodos] = useState<ITodo[]>([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetchTodos();
@@ -55,8 +58,16 @@ function TodoPage() {
       .catch((err) => console.log(err));
   };
 
+  const onLogout = () => {
+    logoutUserService();
+    navigate("/login", { replace: true });
+  };
+
   return (
     <main className="App">
+      <button className="ExitBtn" type="button" onClick={onLogout}>
+        Exit
+      </button>
       <h1>My Todos</h1>
       <AddTodo saveTodo={handleSaveTodo} />
       {todos.map((todo: ITodo) => (

@@ -7,6 +7,7 @@ export const getTodos = async (): Promise<AxiosResponse<ApiDataType>> => {
     const todos: AxiosResponse<ApiDataType> = await axios.get(
       baseUrl + "/todos"
     );
+
     return todos;
   } catch (error: any) {
     throw new Error(error);
