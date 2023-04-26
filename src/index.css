@@ -13,15 +13,24 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #fff;
-  background: #333;
+  background-color: #333;
 }
 
 button {
+  width: 120px;
+  height: 40px;
+  font-size: 1rem;
+  padding: 5px 10px;
+  border: 1px solid #ff9900;
+  border-radius: 5px;
+  background-color: #f5f6f7;
+
   cursor: pointer;
   transition: all 300ms ease-in-out;
 }
 
 button:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   opacity: 0.5;
 }
 
@@ -80,6 +89,10 @@ button:hover {
   border-bottom: 1px solid #333333;
 }
 
+.Card--text {
+  text-align: left;
+}
+
 .Card--text h1 {
   color: #ff9900;
 }
@@ -104,7 +117,7 @@ button:hover {
 .Form {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: end;
   padding: 1rem;
   background: #444;
   margin-bottom: 1rem;
@@ -122,26 +135,25 @@ button:hover {
   border: 1px solid #ff9900;
   border-radius: 10px;
   display: block;
-  margin: 0.3rem 1rem 0 0;
+  margin-right: 10px;
 }
 
 .Form button {
   background: #ff9900;
   color: #fff;
   padding: 0.5rem 1rem;
-  border-radius: 20px;
   border: none;
+}
+
+.ExitBtn {
+  margin-left: 80%;
 }
 
 .line-through {
   text-decoration: line-through;
-  color: #777 !important;
+  color: #777;
 }
 
 .hide-button {
   display: none;
-}
-
-button {
-  font-size: calc(10px + 2vmin);
 }
